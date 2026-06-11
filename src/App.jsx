@@ -2,6 +2,7 @@ import './App.css'
 import { HeroSection } from './components/HeroSection';
 import { TopBar } from './components/TopBar';
 import page4Image from './assets/image.png';
+import { HallOfFame } from './components/hallOfFame';
 
 function App() {
 
@@ -17,8 +18,8 @@ function App() {
         </section>
 
 
-        <section className="h-[100dvh] w-screen flex items-center justify-center snap-start bg-blue-400">
-          <h1 className="text-5xl font-bold text-white">Rick</h1>
+        <section className="h-[100dvh] w-screen flex items-center justify-center snap-start">
+          <HallOfFame />
         </section>
 
 
