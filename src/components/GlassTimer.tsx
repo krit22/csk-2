@@ -20,7 +20,7 @@ const GlassTimer: React.FC = () => {
   };
 
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 bottom-[22%] z-20 hidden md:flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <div className="px-8 py-4 rounded-2xl bg-white/[0.01] backdrop-blur-[2px] border border-white/10 flex flex-col items-center justify-center min-w-[280px]">
         <span className="text-white/60 text-sm font-julee tracking-wide mb-1">
           Next match starting in
