@@ -17,14 +17,16 @@ export const HeroSection = () => {
             style={{ backgroundImage: `url(${background1})` }}
             className="h-screen w-screen flex flex-col md:flex-row bg-cover bg-center overflow-hidden relative"
         >
-            {/* Mobile Logo */}
-            <div className={`md:hidden absolute top-[107px] left-1/2 -translate-x-1/2 z-20 transition-all duration-1000 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
-                <img src={logo} alt="CSK Logo" className="h-28 w-auto" />
-            </div>
+            <div className="w-full h-full md:w-[50%] flex flex-col md:items-center md:justify-center px-4">
+                {/* Mobile TopBar Spacer */}
+                <div className="h-24 md:hidden flex-shrink-0" />
+                
+                {/* Mobile Logo Container - Dynamic Gap */}
+                <div className={`md:hidden flex-1 flex items-center justify-center transition-all duration-1000 delay-300 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
+                    <img src={logo} alt="CSK Logo" className="h-[80%] max-h-32 w-auto object-contain" />
+                </div>
 
-            <div className="w-full h-full md:w-[50%] flex items-center justify-center px-4">
-                <div className="w-full max-w-2xl flex flex-col items-center md:items-start justify-center">
-
+                <div className="w-full max-w-2xl flex flex-col items-center md:items-start justify-center flex-shrink-0">
                     <div className="flex flex-col items-center md:items-start">
                         <div className="overflow-hidden">
                             <div className={`text-8xl md:text-9xl font-bold font-jersey text-[#FAFF00] tracking-widest transition-transform duration-1000 ease-out ${mounted ? 'translate-y-0' : 'translate-y-full'}`}>
@@ -51,6 +53,9 @@ export const HeroSection = () => {
                         <GlassTimer />
                     </div>
                 </div>
+
+                {/* Mobile Bottom Spacer to balance TopBar and center the text block */}
+                <div className="flex-1 md:hidden" />
             </div>
             <div className="hidden md:block w-[50%] relative">
                 <img src={hero1} alt="Lion" className={`absolute bottom-[-30%] right-[5%] h-[160%] max-w-none object-contain object-right-bottom transition-all duration-1000 delay-700 ${mounted ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`} />
