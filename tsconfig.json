@@ -24,6 +24,7 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Custom */
+    "ignoreDeprecations": "6.0",
     "allowJs": true,
     "checkJs": false,
     "baseUrl": ".",
